@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day 01 - Bateria</title>
+        <meta charset="utf-8">
+        <style>
+            body{
+                background:#000;
+            }
+            main{
+                height:80vh;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            h1{
+                color:#FFF;
+                text-align: center;
+                padding-top:20px;
+            }
+            #bateria{
+                width:650px;
+                height: 487px;
+                border:1px solid blue;
+                position:relative;
+            }
+            
+            .key{
+                position:absolute;
+                background:rgba(255, 255, 255, 0.5);
+                width:50px;
+                height:50px;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                cursor: pointer;
+                border-radius: 50px;
+                
+                
+            }
+
+            .play{
+                transform: scale(1.5);
+                border-color: #ffc600;
+                box-shadow: 0 0 1rem #ffc600;
+                background:rgba(255, 196, 33, 0.5);
+            }
+
+            .key kbd{
+                font-size: 2rem;
+                text-shadow: 0 0 .5rem #000;
+            }
+            .key .sound{
+                font-size:0.7rem;
+            }
+            .key#A{
+                top:160px;
+                left:80px;
+            }
+
+            .key#S{
+                top:120px;
+                left:190px;
+            }
+            .key#D{
+                top:110px;
+                left:260px;
+            }
+            .key#F{
+                top:120px;
+                left:360px;
+            }
+            .key#G{
+                top:150px;
+                left:440px;
+            }
+            .key#H{
+                top:20px;
+                left:390px;
+            }
+            .key#J{
+                top:20px;
+                left:90px;
+            }
+           .key#k{
+                top:210px;
+                left:280px;
+            }
+            .key#L{
+                top:290px;
+                left:440px;
+            }
+            .key#Ç{
+                top:270px;
+                left:160px;
+            }
+
+        </style>
+    </head>
+    <body>
+            <h1>Bateria - Challenge 30 Days JS</h1>
+        <main>
+            
+                <div id="bateria">
+                    <img src="bateria.jpg" usemap="#mapa">
+                    <map name="mapa">
+                            <area target="" alt="Caixa" title="Caixa" href="#" coords="300,250,51" shape="circle">
+                            <area target="" alt="Surdo" title="Surdo" href="#" coords="476,329,62" shape="circle">
+                            <area target="" alt="Tom" title="Tom" href="#" coords="382,155,45" shape="circle">
+                            <area target="" alt="Tom" title="Tom" href="#" coords="291,144,38" shape="circle">
+                            <area target="" alt="Tom" title="Tom" href="#" coords="212,147,32" shape="circle">
+                            <area target="" alt="Prato" title="Prato" href="#" coords="130,47,79" shape="circle">
+                            <area target="" alt="Prato" title="Prato" href="#" coords="435,41,77" shape="circle">
+                            <area target="" alt="Prato" title="Prato" href="#" coords="124,196,55" shape="circle">
+                            <area target="" alt="Prato" title="Prato" href="#" coords="507,189,72" shape="circle">
+                            <area target="" alt="Bumbo" title="Bumbo" href="" coords="207,247,180,258,158,274,147,286,143,307,144,321,163,339,182,339,207,339,240,321,263,307,241,261,241,246" shape="poly">
+                        </map>
+                        <div class="keys">
+                                <div data-key="65" class="key teste" id="A">
+                                    <kbd>A</kbd>
+                                    <span class="sound">Clap</span>
+                                </div>
+                                <div data-key="83" class="key" id="S">
+                                        <kbd>S</kbd>
+                                        <span class="sound">Hihat</span>
+                                </div>
+                                <div data-key="68" class="key" id="D">
+                                        <kbd>D</kbd>
+                                        <span class="sound">Tom</span>
+                                </div>
+                                <div data-key="70" class="key" id="F">
+                                        <kbd>F</kbd>
+                                        <span class="sound">Openhat</span>
+                                </div>
+                                <div data-key="71" class="key" id="G">
+                                        <kbd>G</kbd>
+                                        <span class="sound">Tink</span>
+                                </div>
+                                <div data-key="72" class="key" id="H">
+                                        <kbd>H</kbd>
+                                        <span class="sound">Ride</span>
+                                </div>
+                                <div data-key="74" class="key" id="J">
+                                        <kbd>J</kbd>
+                                        <span class="sound">Tink</span>
+                                </div>
+                                <div data-key="75" class="key" id="k">
+                                        <kbd>k</kbd>
+                                        <span class="sound">Snare</span>
+                                </div>
+                                <div data-key="76" class="key" id="L">
+                                        <kbd>L</kbd>
+                                        <span class="sound">Boom</span>
+                                </div>
+                                <div data-key="186" class="key" id="Ç">
+                                        <kbd>Ç</kbd>
+                                        <span class="sound">Kick</span>
+                                </div>
+                        </div>   
+
+                </div>  
+
+                <audio data-key="65" src="sounds/clap.wav"></audio>
+                <audio data-key="83" src="sounds/hihat.wav"></audio>
+                <audio data-key="68" src="sounds/tom.wav"></audio>
+                <audio data-key="70" src="sounds/openhat.wav"></audio>
+                <audio data-key="71" src="sounds/tink.wav"></audio>
+                <audio data-key="72" src="sounds/ride.wav"></audio>
+                <audio data-key="74" src="sounds/tink.wav"></audio>
+                <audio data-key="75" src="sounds/snare.wav"></audio>
+                <audio data-key="76" src="sounds/boom.wav"></audio>
+                <audio data-key="186" src="sounds/kick.wav"></audio>
+
+
+                
+
+        </main>
+
+
+        <script>
+            
+            document.addEventListener('keyup',(e)=>{
+               
+                let teclas = [65,83,68,70,71,72,74,75,76,186];
+                let press = e.keyCode;
+                if(teclas.indexOf(press) >= 0){
+                    
+                    let key = document.querySelector(`.key[data-key="${press}"]`);
+                    tocar(key);
+                }
+            });
+
+            let todasTeclas = document.querySelectorAll(".key");
+                    todasTeclas.forEach((tecla)=>{
+                        console.log(tecla);
+                        tecla.addEventListener('click',(e) => {
+                              if( e.target.classList.contains("key")){
+                                 tocar(e.target);
+                              }else{
+                                 tocar(e.target.parentNode);
+                              }
+                        });
+
+            });
+        
+            function tocar(elemento){
+
+                let key = elemento.dataset.key;
+                let audio = document.querySelector(`audio[data-key="${key}"]`);
+
+                let todasTeclas = document.querySelectorAll(".key");
+                    todasTeclas.forEach((tecla)=>{
+                        tecla.classList.remove('play');
+                });
+
+                audio.currentTime = 0;
+                    audio.play();
+                    elemento.classList.add('play');
+                    
+                    setTimeout(() =>{
+                        elemento.classList.remove('play');
+                    },1000)
+
+
+            }
+        
+        </script>
+       
+
+    </body>
+
+</html>
